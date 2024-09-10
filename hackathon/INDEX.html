@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIShelf - Your AI Tools Library</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">AI-Shelf</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="tool.html">Browse Tools</a></li>
+            <li><a href="learn.html">Learn</a></li>
+        </ul>
+        <div class="action-buttons">
+            <a href="profile.html">
+                <button class="btn started-btn">Get Started by creating an account</button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Existing Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>AI Tools at Your Fingertips</h1>
+            <p>Your gateway to the most powerful AI tools on the market. Explore, learn, and get started today! Unlock the potential of cutting-edge AI tools with us! Discover a curated selection of the most advanced and powerful AI solutions available today. Whether you're looking to enhance your creative projects, streamline workflows, or dive deep into the world of artificial intelligence, our platform offers the resources you need.</p>
+            <!-- Button that scrolls to search bar -->
+            <a href="BROWSETOOLS.HTML" class="cta-btn">Explore AI Tools</a>
+        </div>
+        <div class="hero-image">
+            <img src="AI.png" alt="AI Tools" class="ai-tools-image">
+        </div>
+    </section>
+
+    <!-- Search Bar Section (updated) -->
+    <section id="search-section" class="search-section">
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search your required AI tool... type art or video" class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+    </section>
+
+    <!-- AI Tools Suggestion Block -->
+    <section class="ai-tools-suggestion">
+        <h2>Suggested AI Tools</h2>
+        <div class="ai-tools-container">
+            <!-- Tool 1: ChatGPT -->
+            <div class="tool" data-name="ChatGPT" data-description="An advanced AI model designed to generate conversational responses in real-time.">
+                <div class="tool-icon">&#128161;</div>
+                <h3>ChatGPT</h3>
+                <p>An advanced AI model designed to generate conversational responses in real-time.</p>
+            </div>
+
+            <!-- Tool 2: Jasper AI -->
+            <div class="tool" data-name="Jasper AI" data-description="AI content generation tool that helps create engaging content for marketing.">
+                <div class="tool-icon">&#128200;</div>
+                <h3>Jasper AI</h3>
+                <p>AI content generation tool that helps create engaging content for marketing.</p>
+            </div>
+
+            <!-- Tool 3: DALL-E -->
+            <div class="tool" data-name="DALL-E" data-description="A model that generates images from textual descriptions, using AI.">
+                <div class="tool-icon">&#128247;</div>
+                <h3>DALL-E</h3>
+                <p>A model that generates images from textual descriptions, using AI.</p>
+            </div>
+
+            <!-- Tool 4: MidJourney -->
+            <div class="tool" data-name="MidJourney" data-description="An AI art generator tool used to create high-quality artwork from prompts.">
+                <div class="tool-icon">&#128296;</div>
+                <h3>MidJourney</h3>
+                <p>An AI art generator tool used to create high-quality artwork from prompts.</p>
+            </div>
+
+            <!-- Tool 5: Grammarly -->
+            <div class="tool" data-name="Grammarly" data-description="A writing assistant tool that helps correct grammar, spelling, and tone.">
+                <div class="tool-icon">&#9997;</div>
+                <h3>Grammarly</h3>
+                <p>A writing assistant tool that helps correct grammar, spelling, and tone.</p>
+            </div>
+
+            <!-- Tool 6: Synthesia -->
+            <div class="tool" data-name="Synthesia" data-description="AI video generation tool for creating realistic video content with avatars.">
+                <div class="tool-icon">&#128187;</div>
+                <h3>Synthesia</h3>
+                <p>AI video generation tool for creating realistic video content with avatars.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Search Functionality -->
+    <script>
+    document.querySelector('.search-button').addEventListener('click', function() {
+        const query = document.querySelector('.search-input').value.toLowerCase();
+        const tools = document.querySelectorAll('.ai-tools-container .tool');
+        
+        tools.forEach(tool => {
+            const name = tool.getAttribute('data-name').toLowerCase();
+            const description = tool.getAttribute('data-description').toLowerCase();
+            if (name.includes(query) || description.includes(query)) {
+                tool.style.display = 'block';
+            } else {
+                tool.style.display = 'none';
+            }
+        });
+    });
+
+    // Optional: To allow pressing "Enter" to trigger search
+    document.querySelector('.search-input').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            document.querySelector('.search-button').click();
+        }
+    });
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 AI-SHELF. All rights reserved.</p>
+</footer>
+</html>

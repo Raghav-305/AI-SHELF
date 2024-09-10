@@ -1,0 +1,95 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply Roboto font to the entire page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Video Background */
+#background-video {
+    position: fixed; /* Fixed position to cover the background */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover the entire area */
+    z-index: -1; /* Place it behind other elements */
+}
+
+/* Header Box */
+.header-box {
+    position: fixed; /* Fix position at the top left */
+    top: 10px; /* Space from the top */
+    left: 10px; /* Space from the left */
+    background-color: black; /* Background color of the box */
+    padding: 10px 20px; /* Padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 10; /* Keep it on top */
+}
+
+/* AI-SHELF Text in Header Box */
+.ai-shelf-link h2 {
+    color: white; /* White text color */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bolder; /* Thicker font */
+    text-transform: uppercase; /* Capitalize all letters */
+    margin: 0; /* No margin */
+}
+
+/* Profile Content Section */
+.profile-content {
+    margin-top: 60px; /* Space below the fixed header */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+.profile-form {
+    max-width: 600px; /* Max width of the form */
+    margin: 0 auto; /* Center align the form */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    display: block; /* Make label a block element */
+    font-size: 16px; /* Font size for labels */
+    margin-bottom: 5px; /* Space below the label */
+    color: #333; /* Darker text color */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%; /* Full width input and select */
+    padding: 10px; /* Padding inside the input */
+    font-size: 16px; /* Font size for input text */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.submit-btn {
+    background-color: #743fc4; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size for button text */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.submit-btn:hover {
+    background-color: #5a2d91; /* Darker purple on hover */
+}

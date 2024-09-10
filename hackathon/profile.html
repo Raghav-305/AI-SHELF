@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="background-video">
+        <source src="robo dance.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header Section -->
+    <div class="header-box">
+        <a href="index.html" class="ai-shelf-link">
+            <h2>AI-SHELF</h2>
+        </a>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="profile-content">
+        <h1>Profile Settings</h1>
+        
+        <form class="profile-form" id="profile-form">
+            <div class="form-group">
+                <label for="contact-info">Contact Info:</label>
+                <input type="text" id="contact-info" name="contact-info" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">Mail:</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" name="profession" required>
+            </div>
+            <button type="submit" class="submit-btn">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to save form data to localStorage
+        function saveFormData() {
+            const contactInfo = document.getElementById('contact-info').value;
+            const mail = document.getElementById('mail').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.getElementById('gender').value;
+            const profession = document.getElementById('profession').value;
+
+            // Store form data in localStorage
+            localStorage.setItem('contactInfo', contactInfo);
+            localStorage.setItem('mail', mail);
+            localStorage.setItem('dob', dob);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('profession', profession);
+
+            alert("Profile saved successfully!");
+        }
+
+        // Function to load form data from localStorage
+        function loadFormData() {
+            const contactInfo = localStorage.getItem('contactInfo');
+            const mail = localStorage.getItem('mail');
+            const dob = localStorage.getItem('dob');
+            const gender = localStorage.getItem('gender');
+            const profession = localStorage.getItem('profession');
+
+            // Set form fields with saved values
+            if (contactInfo) document.getElementById('contact-info').value = contactInfo;
+            if (mail) document.getElementById('mail').value = mail;
+            if (dob) document.getElementById('dob').value = dob;
+            if (gender) document.getElementById('gender').value = gender;
+            if (profession) document.getElementById('profession').value = profession;
+        }
+
+        // Event listener for form submission
+        document.getElementById('profile-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+            saveFormData(); // Save form data to localStorage
+        });
+
+        // Load form data when the page loads
+        window.addEventListener('DOMContentLoaded', loadFormData);
+    </script>
+</body>
+</html>

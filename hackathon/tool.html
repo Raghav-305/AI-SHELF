@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Finder</title>
+    <link rel="stylesheet" href="aty.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="BROWSETOOLS.HTML" class="nav-link">Browse Tools</a>
+    </nav>
+
+    <header class="header">
+        <h1>AI Tool Finder</h1>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for AI tools">
+        <input type="submit" value="Search" onclick="filterTools()">
+    </div>
+
+    <div class="tool-grid" id="toolGrid">
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="ChatGPT Icon">
+            <h3>AI Tool 1: ChatGPT</h3>
+            <p>ChatGPT is an AI chatbot that assists with generating text and answering questions in natural language.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="DALL-E Icon">
+            <h3>AI Tool 2: DALL-E</h3>
+            <p>DALL-E generates images from textual descriptions, allowing you to create visuals based on your imagination.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Deepart Icon">
+            <h3>AI Tool 3: Deepart</h3>
+            <p>DeepArt allows you to turn images into artwork using AI algorithms.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Jasper Icon">
+            <h3>AI Tool 4: Jasper</h3>
+            <p>Jasper is an AI writing assistant that helps you create engaging content.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="VideoMaker AI Icon">
+            <h3>AI Tool 5: VideoMaker AI</h3>
+            <p>VideoMaker AI helps in creating high-quality videos using AI-driven features.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Synthesia Icon">
+            <h3>AI Tool 6: Synthesia</h3>
+            <p>Synthesia uses AI to create engaging video presentations with AI avatars.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Grammarly Icon">
+            <h3>AI Tool 7: Grammarly</h3>
+            <p>Grammarly is an AI-powered writing assistant that helps improve grammar, punctuation, and style in your writing.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Hemingway Editor Icon">
+            <h3>AI Tool 8: Hemingway Editor</h3>
+            <p>The Hemingway Editor enhances your writing by highlighting complex sentences and suggesting readability improvements.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Scribe Icon">
+            <h3>AI Tool 9: Scribe</h3>
+            <p>Scribe creates step-by-step guides and documentation from your actions, automating the process of creating instructional content.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Lumen5 Icon">
+            <h3>AI Tool 10: Lumen5</h3>
+            <p>Lumen5 converts blog posts and text content into engaging videos using AI, simplifying the video creation process.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Zapier Icon">
+            <h3>AI Tool 11: Zapier</h3>
+            <p>Zapier connects different apps and automates workflows, allowing you to streamline repetitive tasks without coding.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Pictory Icon">
+            <h3>AI Tool 12: Pictory</h3>
+            <p>Pictory uses AI to transform text into professional-looking videos, helping you create visual content easily.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="CopySmith Icon">
+            <h3>AI Tool 13: CopySmith</h3>
+            <p>CopySmith generates high-quality marketing copy and product descriptions, enhancing your content creation process.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Frase Icon">
+            <h3>AI Tool 14: Frase</h3>
+            <p>Frase helps optimize your content for SEO by analyzing search intent and suggesting improvements based on top-ranking pages.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Runway Icon">
+            <h3>AI Tool 15: Runway</h3>
+            <p>Runway offers a suite of AI tools for creative projects, including video editing, image generation, and more.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Cogram Icon">
+            <h3>AI Tool 16: Cogram</h3>
+            <p>Cogram assists with coding by providing AI-generated code suggestions and bug fixes, streamlining the development process.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Gong Icon">
+            <h3>AI Tool 17: Gong</h3>
+            <p>Gong analyzes sales calls and meetings using AI, offering insights to improve sales performance and strategies.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Druva Icon">
+            <h3>AI Tool 18: Druva</h3>
+            <p>Druva provides cloud data protection and management with AI, ensuring secure backup and recovery solutions.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Aiva Icon">
+            <h3>AI Tool 19: Aiva</h3>
+            <p>Aiva creates original music compositions using AI, ideal for various media projects and creative endeavors.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Copy.ai Icon">
+            <h3>AI Tool 20: Copy.ai</h3>
+            <p>Copy.ai helps generate marketing copy, product descriptions, and other content quickly using AI technology.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Replika Icon">
+            <h3>AI Tool 21: Replika</h3>
+            <p>Replika is an AI chatbot designed to offer emotional support and conversation, helping users feel less lonely.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Artbreeder Icon">
+            <h3>AI Tool 22: Artbreeder</h3>
+            <p>Artbreeder allows you to create and explore art through AI by blending images and adjusting parameters to generate new visuals.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Descript Icon">
+            <h3>AI Tool 23: Descript</h3>
+            <p>Descript offers AI-powered audio and video editing, making it easy to create and refine multimedia content.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Frase Icon">
+            <h3>AI Tool 24: Frase</h3>
+            <p>Frase helps optimize your content for SEO by analyzing search intent and suggesting improvements based on top-ranking pages.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="tool-item">
+            <img class="icon" src="aii.png" alt="Fotor Icon">
+            <h3>AI Tool 25: Fotor</h3>
+            <p>Fotor uses AI to enhance photo editing capabilities, offering a range of tools for image retouching and effects.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <script>
+        function filterTools() {
+            var input, filter, grid, items, h3, p, i, txtTitle, txtDesc;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            grid = document.getElementById('toolGrid');
+            items = grid.getElementsByClassName('tool-item');
+    
+            for (i = 0; i < items.length; i++) {
+                h3 = items[i].getElementsByTagName('h3')[0];
+                p = items[i].getElementsByTagName('p')[0];
+                if (h3 && p) {
+                    txtTitle = h3.textContent || h3.innerText;
+                    txtDesc = p.textContent || p.innerText;
+                    if (txtTitle.toUpperCase().indexOf(filter) > -1 || txtDesc.toUpperCase().indexOf(filter) > -1) {
+                        items[i].style.display = "";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
